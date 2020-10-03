@@ -71,7 +71,5 @@ public class BalloonMovement : MonoBehaviour {
            Destroy(child.gameObject);
            _audio.Play();
         }
-        
-         
     }
 }
