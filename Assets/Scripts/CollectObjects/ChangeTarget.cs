@@ -1,15 +1,18 @@
-﻿
-#region Libraries
+﻿#region Libraries
+
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+
 #endregion
 
 public class ChangeTarget : MonoBehaviour
 {
-    #region Variables 
+    #region Variables
+
     public List<GameObject> shapes = new List<GameObject>();
     public List<GameObject> targetShapes = new List<GameObject>();
+    private List<GameObject> shapesAfterMatched = new List<GameObject>();
     private int shapeSize;
     private int randomNumber;
     private GameObject tempGameObject;
@@ -17,16 +20,18 @@ public class ChangeTarget : MonoBehaviour
     private bool isShapeMatched = false;
     private MatchObjects matchObjects;
     private int random = 0;
+    private float a = -3.35f, b = - 1.13f;
 
     #endregion
 
     //private List<ShapeData> shapeList;
-   
+
 
     private void Start()
     {
         shapeSize = shapes.Count;
         targetShapes = shapes;
+        shapesAfterMatched = shapes;
         Shuffle();
         SetTarget();
     }
@@ -41,8 +46,11 @@ public class ChangeTarget : MonoBehaviour
         {
             if (matchObjects.GetIsLocked())
             {
-                shapes[random].GetComponent<SpriteRenderer>().sprite = null;
+                shapesAfterMatched[random].transform.position = new Vector3(a, b, 0);
+                shapesAfterMatched[random].GetComponent<Renderer>().sortingOrder = 0;
+                //shapes[random].GetComponent<SpriteRenderer>().sprite = null;
                 shapes.RemoveAt(random);
+                a--;
                 SetTarget();
             }
         }
@@ -62,8 +70,8 @@ public class ChangeTarget : MonoBehaviour
             //shapeList.Add(new ShapeData(i, shapes[i].GetComponent<SpriteRenderer>().sprite));
         }
     }
-    
-    
+
+
     // Sets target shape 
     private void SetTarget()
     {
@@ -74,8 +82,4 @@ public class ChangeTarget : MonoBehaviour
             matchObjects = targetShapes[random].GetComponent<MatchObjects>();
         }
     }
-
-    
-    
-
 }
