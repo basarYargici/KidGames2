@@ -20,6 +20,8 @@ public class BalloonMovement : MonoBehaviour {
     public float startMargin;
     public float limit;
     private AudioSource _audio;
+    public MatchObjectCounter matchObjectCounter;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -74,6 +76,7 @@ public class BalloonMovement : MonoBehaviour {
         foreach (Transform child in transform) {
            Destroy(child.gameObject);
            _audio.Play();
+           matchObjectCounter.IncreaseMatchedObjectCount();
         }
     }
 }
