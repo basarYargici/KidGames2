@@ -1,9 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
+/*
+ * Written by İBRAHİM BAŞAR YARGICI
+ * 
+ * Date: 02/10/2020
+ * Last Update: 08/10/2020
+ * 
+ * Purpose: Giving a movement to the balloons and its parents.
+ */
 public class BalloonMovement : MonoBehaviour {
     private Rigidbody2D _rb;
     public float force;

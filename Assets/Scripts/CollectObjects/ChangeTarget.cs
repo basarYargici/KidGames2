@@ -8,10 +8,18 @@ using Random = UnityEngine.Random;
 
 public class ChangeTarget : MonoBehaviour
 {
+    /*
+     * Written by İBRAHİM BAŞAR YARGICI
+     * 
+     * Date: 02/10/2020
+     * 
+     * Purpose: Takes shape list and shuffles them. Finally sets the shuffled list to the exact target point.  
+     */
+
     #region Variables
 
     public List<GameObject> shapes = new List<GameObject>();
-    public List<GameObject> targetShapes = new List<GameObject>();
+    private List<GameObject> targetShapes = new List<GameObject>();
     private List<GameObject> shapesAfterMatched = new List<GameObject>();
     private int shapeSize;
     private int randomNumber;
@@ -20,7 +28,8 @@ public class ChangeTarget : MonoBehaviour
     private bool isShapeMatched = false;
     private MatchObjects matchObjects;
     private int random = 0;
-    private float a = -3.35f, b = - 1.13f;
+    public AudioSource sound;
+    private float a = -3.35f, b = -1.13f;
 
     #endregion
 
@@ -29,6 +38,7 @@ public class ChangeTarget : MonoBehaviour
 
     private void Start()
     {
+        sound = GetComponent<AudioSource>();
         shapeSize = shapes.Count;
         targetShapes = shapes;
         shapesAfterMatched = shapes;
@@ -46,6 +56,7 @@ public class ChangeTarget : MonoBehaviour
         {
             if (matchObjects.GetIsLocked())
             {
+                sound.Play();
                 shapesAfterMatched[random].transform.position = new Vector3(a, b, 0);
                 shapesAfterMatched[random].GetComponent<Renderer>().sortingOrder = 0;
                 //shapes[random].GetComponent<SpriteRenderer>().sprite = null;

@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PoppingBubbles.unity
+    path: Assets/Scenes/Opening Screen/OpeningScreen 0.unity
+    guid: 09c52449db74c7443a0aed42414d612b
+  - enabled: 1
+    path: Assets/Scenes/Opening Screen/OpeningScreen 1(GoesDown).unity
+    guid: 8942ec91b4b6de648afccf48724d3afa
+  - enabled: 1
+    path: Assets/Scenes/Opening Screen/OpeningScreen 2(GoesUp).unity
+    guid: cd1bc52730e5e1b45ad23b99e0056546
+  - enabled: 1
+    path: Assets/Scenes/Collecting Objects/CollectObjectsMainScreen 0.unity
+    guid: c28ead71cb3a6a44f90cf95bfa864c50
+  - enabled: 1
+    path: Assets/Scenes/Collecting Objects/CollectObjects 1.unity
+    guid: 511138b50c1166445a0543a0f498daaa
+  - enabled: 1
+    path: Assets/Scenes/Popping Bubbles/PoppingBubblesMainScreen 0.unity
+    guid: 6a7f4d0b99cd7e54db8bc3ad4d91d52e
+  - enabled: 1
+    path: Assets/Scenes/Popping Bubbles/PoppingBubbles 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
