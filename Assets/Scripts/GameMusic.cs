@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
 /*
 * Written by İBRAHİM BAŞAR YARGICI
 * 
@@ -8,22 +11,30 @@
 */
 public class GameMusic : MonoBehaviour
 {
-    void Awake()
+    private int buildIndex;
+    [SerializeField] private int playUntilScene; 
+
+    private void Update()
     {
+        buildIndex = SceneManager.GetActiveScene().buildIndex;
+        
         SetUpSingleton();
     }
- 
+
+    
     private void SetUpSingleton()
     {
-        if (FindObjectsOfType(GetType()).Length>1)
+        // if (FindObjectsOfType(GetType()).Length>1) 
+        // {
+        //     Destroy(gameObject);
+        // }
+        if (buildIndex > playUntilScene)
         {
             Destroy(gameObject);
- 
         }
         else
         {
             DontDestroyOnLoad(gameObject);
         }
     }
- 
 }

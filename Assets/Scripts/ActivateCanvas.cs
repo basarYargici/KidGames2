@@ -17,7 +17,7 @@ public class ActivateCanvas : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (matchObjectCounter.GetMatchedObjectCount() == shapeCount)
         {

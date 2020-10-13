@@ -10,7 +10,7 @@ using UnityEngine;
  */
 public class MatchObjectCounter : MonoBehaviour
 {
-    private int matchedObjectCount;
+    public int matchedObjectCount;
 
     public int GetMatchedObjectCount()
     {
