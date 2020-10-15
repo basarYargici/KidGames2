@@ -23,7 +23,7 @@ public class Balloon : MonoBehaviour
         audio = GetComponent<AudioSource>();
 
         rigidBody = GetComponent<Rigidbody2D>();
-        force = new Vector3(Random.Range(-15f, 15f), Random.Range(20f, 30f));
+        force = new Vector3(Random.Range(-15f, 15f), Random.Range(30f, 40f));
     }
 
     // Update is called once per frame

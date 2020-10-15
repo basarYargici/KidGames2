@@ -36,7 +36,7 @@ public class SpawnBalloons : MonoBehaviour
 
     public void SpawnObject()
     {
-        if (balloonCount < 10)
+        if (balloonCount < 6)
         {
             Instantiate(prefab, spawningPosition, Quaternion.identity);
             balloonCount++;
