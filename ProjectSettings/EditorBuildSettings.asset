@@ -5,25 +5,52 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Opening Screen/OpeningScreen 0.unity
+  - enabled: 0
+    path: Assets/Scenes/OldScenes/OpeningScreen 0.unity
     guid: 09c52449db74c7443a0aed42414d612b
-  - enabled: 1
-    path: Assets/Scenes/Opening Screen/OpeningScreen 1(GoesDown).unity
+  - enabled: 0
+    path: Assets/Scenes/OldScenes/OpeningScreen 1(GoesDown).unity
     guid: 8942ec91b4b6de648afccf48724d3afa
-  - enabled: 1
-    path: Assets/Scenes/Opening Screen/OpeningScreen 2(GoesUp).unity
+  - enabled: 0
+    path: Assets/Scenes/OldScenes/OpeningScreen 2(GoesUp).unity
     guid: cd1bc52730e5e1b45ad23b99e0056546
   - enabled: 1
-    path: Assets/Scenes/Collecting Objects/CollectObjectsMainScreen 0.unity
+    path: Assets/Scenes/Opening Screen/Welcome.unity
+    guid: e4179591a7649f745baedd5635816709
+  - enabled: 1
+    path: Assets/Scenes/Opening Screen/AllGames.unity
+    guid: 1b4c4d8a37cf54841ac93c8439afde6e
+  - enabled: 0
+    path: Assets/Scenes/OldScenes/CollectObjectsMainScreen 0.unity
     guid: c28ead71cb3a6a44f90cf95bfa864c50
   - enabled: 1
     path: Assets/Scenes/Collecting Objects/CollectObjects 1.unity
     guid: 511138b50c1166445a0543a0f498daaa
-  - enabled: 1
-    path: Assets/Scenes/Popping Bubbles/PoppingBubblesMainScreen 0.unity
+  - enabled: 0
+    path: Assets/Scenes/OldScenes/PoppingBubblesMainScreen 0.unity
     guid: 6a7f4d0b99cd7e54db8bc3ad4d91d52e
   - enabled: 1
     path: Assets/Scenes/Popping Bubbles/PoppingBubbles 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/OldScenes/SortByVolumeMainScreen 0.unity
+    guid: 3e2ae19386baabd439ad07bee3a117f8
+  - enabled: 1
+    path: Assets/Scenes/Sort By Volume/SortByVolume1.unity
+    guid: 893ab2aabca3a0244addf3a2f581e4c0
+  - enabled: 1
+    path: Assets/Scenes/Sort By Volume/SortByVolume2.unity
+    guid: eaf078ac1b1557a4f8ed374a342c282d
+  - enabled: 1
+    path: Assets/Scenes/Sort By Volume/SortByVolume3.unity
+    guid: 281f6b63d345413499739104c0530aef
+  - enabled: 1
+    path: Assets/Scenes/Sort By Volume/SortByVolume4.unity
+    guid: b56ae55b257940b4bb42a3f5551e49ea
+  - enabled: 1
+    path: Assets/Scenes/Sort By Volume/SortByVolume5.unity
+    guid: e9a77e7a85539ad49b2e454cce2b25d4
+  - enabled: 1
+    path: Assets/Scenes/Sort By Volume/SortByVolume6.unity
+    guid: c2721b950e3cd554db513c1c6df29c5e
   m_configObjects: {}

@@ -21,7 +21,7 @@ public class MatchObject : MonoBehaviour
 
     private bool isLocked;
 
-    //public ParticleSystem particleSystem;
+    //public ParticleSystem particle;
 
     public MatchObjectCounter matchObjectCounter;
 
@@ -42,7 +42,7 @@ public class MatchObject : MonoBehaviour
 
     private void Start()
     {
-        // particleSystem.GetComponent<Renderer>().sortingOrder = 2;
+        //particle.GetComponent<Renderer>().sortingOrder = 2;
         initialPosition = transform.position;
     }
 
@@ -70,34 +70,27 @@ public class MatchObject : MonoBehaviour
          */
         if (!isLocked)
         {
-            // if (Camera.main != null)
-            // {
-            //     mousePosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            // }
-            // transform.position = new Vector3(mousePosition.x, mousePosition.y);
-            //
-
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y);
 
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
             transform.position = curPosition;
-            //ParticleSystem();
+            // ParticleSystem();
         }
     }
+/*
+    void ParticleSystem()
+    {
+        //Instantiate our one-off particle system
+        var explosionEffect = Instantiate(particle, transform.position, quaternion.identity);
+        // explosionEffect.transform.position = transform.position;
+        //play it
+        explosionEffect.loop = false;
+        explosionEffect.Play();
 
-//void ParticleSystem()
-//{
-//    //Instantiate our one-off particle system
-//    var explosionEffect = Instantiate(particleSystem, transform.position, quaternion.identity);
-//    // explosionEffect.transform.position = transform.position;
-//    //play it
-//    explosionEffect.loop = false;
-//    explosionEffect.Play();
-
-//    //destroy the particle system when its duration is up, right
-//    Destroy(explosionEffect.gameObject, 0.5f);
-//}
-
+        //destroy the particle system when its duration is up, right
+        Destroy(explosionEffect.gameObject, 0.5f);
+    }
+*/
 
     private void OnMouseUp()
     {

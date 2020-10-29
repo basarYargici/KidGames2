@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: {x: 0, y: 0, z: 0}
+  particle: {fileID: 1630560953201328044, guid: 20e8cc4f750b40545a25e54aa9a3f28b, type: 3}
 --- !u!82 &-4428905426462383059
 AudioSource:
   m_ObjectHideFlags: 0

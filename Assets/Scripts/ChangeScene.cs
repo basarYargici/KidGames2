@@ -10,10 +10,19 @@ using UnityEngine.SceneManagement;
  */
 
 public class ChangeScene : MonoBehaviour {
-    [SerializeField] private string scene;
-
     public void openNewScene(int sceneNumber) {
         //SceneManager.LoadScene("Scenes/ShapeMatchAnimals");
         SceneManager.LoadScene(sceneNumber);
+    }
+    
+    public void openNextScene()
+    {
+        var index = SceneManager.GetActiveScene().buildIndex;
+        index++;
+        SceneManager.LoadScene(index);
+    }
+    public void exitGame()
+    {
+        Application.Quit();
     }
 }

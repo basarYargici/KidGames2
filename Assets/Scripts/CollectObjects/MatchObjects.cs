@@ -50,6 +50,7 @@ public class MatchObjects : MonoBehaviour
 
     void OnMouseDown()
     {
+
         offset = gameObject.transform.position -
                  Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y));
     }
@@ -60,6 +61,7 @@ public class MatchObjects : MonoBehaviour
         /*
          * if the shape has not locked drag the shape with input
          */
+
         if (!isLocked)
         {
             // if (Camera.main != null)
@@ -74,6 +76,7 @@ public class MatchObjects : MonoBehaviour
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
             transform.position = curPosition;
             ParticleSystem();
+
         }
     }
 
@@ -81,6 +84,7 @@ public class MatchObjects : MonoBehaviour
     {
         //Instantiate our one-off particle system
         var explosionEffect = Instantiate(particleSystem, transform.position, quaternion.identity);
+        
         // explosionEffect.transform.position = transform.position;
         //play it
         explosionEffect.loop = false;
