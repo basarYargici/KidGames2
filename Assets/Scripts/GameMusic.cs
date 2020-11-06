@@ -11,8 +11,13 @@ using UnityEngine.SceneManagement;
 */
 public class GameMusic : MonoBehaviour
 {
-    private int buildIndex;
-    [SerializeField] private int playUntilScene; 
+    private int buildIndex,startIndex;
+    [SerializeField] private int playUntilSceneIndex;
+
+    private void Start()
+    {
+        startIndex = SceneManager.GetActiveScene().buildIndex;
+    }
 
     private void Update()
     {
@@ -24,11 +29,7 @@ public class GameMusic : MonoBehaviour
     
     private void SetUpSingleton()
     {
-        // if (FindObjectsOfType(GetType()).Length>1) 
-        // {
-        //     Destroy(gameObject);
-        // }
-        if (buildIndex > playUntilScene)
+        if (buildIndex > playUntilSceneIndex || buildIndex < startIndex)
         {
             Destroy(gameObject);
         }

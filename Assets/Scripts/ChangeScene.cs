@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /*
@@ -13,6 +14,11 @@ public class ChangeScene : MonoBehaviour {
     public void openNewScene(int sceneNumber) {
         //SceneManager.LoadScene("Scenes/ShapeMatchAnimals");
         SceneManager.LoadScene(sceneNumber);
+    }
+
+    public void openNewSceneViaName(String sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
     
     public void openNextScene()

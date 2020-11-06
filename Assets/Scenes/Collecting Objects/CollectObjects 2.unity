@@ -173,7 +173,7 @@ MonoBehaviour:
   shapes:
   - {fileID: 871136191}
   sound: {fileID: 0}
-  x: 4.5
+  x: 4.3
   y: 0
   shapeResizeNeeded: 1
 --- !u!212 &66543514
@@ -240,7 +240,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03539765, y: 0.005899489}
+  m_Offset: {x: -0.018495142, y: -0.0061650276}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -251,7 +251,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.250717, y: 2.3097134}
+  m_Size: {x: 2.0480647, y: 2.2700086}
   m_EdgeRadius: 0
 --- !u!50 &66543516
 Rigidbody2D:
@@ -546,8 +546,8 @@ GameObject:
   m_Component:
   - component: {fileID: 871136194}
   - component: {fileID: 871136193}
-  - component: {fileID: 871136195}
   - component: {fileID: 871136192}
+  - component: {fileID: 871136195}
   m_Layer: 0
   m_Name: Shape1
   m_TagString: Shapes
@@ -555,8 +555,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!60 &871136192
-PolygonCollider2D:
+--- !u!61 &871136192
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -572,51 +572,15 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.25}
+    oldSize: {x: 1.53, y: 2.39}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.84999996, y: -0.48499998}
-      - {x: 0.95, y: -0.375}
-      - {x: 1.0799999, y: -0.205}
-      - {x: 1.15, y: -0.114999995}
-      - {x: 1.28, y: 0.16499999}
-      - {x: 1.28, y: 0.545}
-      - {x: 1.24, y: 0.675}
-      - {x: 1.11, y: 0.885}
-      - {x: 0.93, y: 1.055}
-      - {x: 0.78, y: 1.125}
-      - {x: 0.51, y: 1.125}
-      - {x: 0.42, y: 1.105}
-      - {x: 0.28, y: 1.045}
-      - {x: 0.11, y: 0.955}
-      - {x: 0.03, y: 0.885}
-      - {x: -0.16, y: 0.995}
-      - {x: -0.34, y: 1.0849999}
-      - {x: -0.51, y: 1.125}
-      - {x: -0.77, y: 1.115}
-      - {x: -0.84999996, y: 1.0849999}
-      - {x: -0.95, y: 1.015}
-      - {x: -1.13, y: 0.825}
-      - {x: -1.15, y: 0.805}
-      - {x: -1.18, y: 0.755}
-      - {x: -1.23, y: 0.655}
-      - {x: -1.28, y: 0.53499997}
-      - {x: -1.28, y: 0.235}
-      - {x: -1.23, y: 0.085}
-      - {x: -1.14, y: -0.095}
-      - {x: -0.96999997, y: -0.33499998}
-      - {x: -0.59999996, y: -0.705}
-      - {x: -0.35999998, y: -0.905}
-      - {x: -0.03, y: -1.115}
-      - {x: 0.04, y: -1.115}
-      - {x: 0.19, y: -1.025}
-      - {x: 0.38, y: -0.895}
-      - {x: 0.65, y: -0.66499996}
+  serializedVersion: 2
+  m_Size: {x: 1.53, y: 2.39}
+  m_EdgeRadius: 0
 --- !u!212 &871136193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -657,8 +621,8 @@ SpriteRenderer:
   m_SortingLayerID: -2088607949
   m_SortingLayer: 2
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 04344737680011d4588191cb0a1db401, type: 3}
-  m_Color: {r: 0.49617395, g: 0.45859733, b: 0.5377358, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c84470cae75bcc64aab15025623f464a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -676,8 +640,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871136191}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 0, z: 6.040591}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -3.76, y: 0.24, z: 6.040591}
+  m_LocalScale: {x: 1.5, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 274517942}
   m_RootOrder: 0
@@ -931,7 +895,6 @@ GameObject:
   - component: {fileID: 1739205883}
   - component: {fileID: 1739205882}
   - component: {fileID: 1739205885}
-  - component: {fileID: 1739205886}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -946,7 +909,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739205881}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1739205883
 Camera:
   m_ObjectHideFlags: 0
@@ -1011,7 +974,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739205881}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1fb54c75c00a53341ae70bdacc4aa42c, type: 3}
@@ -1100,19 +1063,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1739205886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739205881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b46ec308f5111a547a57c165b7e00ac5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playUntilSceneIndex: 25
 --- !u!1 &1784640683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,4 +1627,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   change: {fileID: 5494696363610679526}
   sceneNumber: 0
-  sceneName: CollectObjects 2
+  sceneName: CollectObjects 3

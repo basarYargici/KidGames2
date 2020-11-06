@@ -1,6 +1,8 @@
 ﻿#region Libraries
 
+using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -29,8 +31,8 @@ public class ChangeTarget : MonoBehaviour
     private MatchObjects matchObjects;
     private int random = 0;
     public AudioSource sound;
-    private float a = -3.35f, b = -1.13f;
-
+    [SerializeField]private float x = -3.35f, y = -1.13f;
+    public bool shapeResizeNeeded = false;
     #endregion
 
     //private List<ShapeData> shapeList;
@@ -57,11 +59,11 @@ public class ChangeTarget : MonoBehaviour
             if (matchObjects.GetIsLocked())
             {
                 sound.Play();
-                shapesAfterMatched[random].transform.position = new Vector3(a, b, 0);
+                shapesAfterMatched[random].transform.position = new Vector3(x, y, 0);
                 shapesAfterMatched[random].GetComponent<Renderer>().sortingOrder = 0;
                 //shapes[random].GetComponent<SpriteRenderer>().sprite = null;
                 shapes.RemoveAt(random);
-                a--;
+                x--;
                 SetTarget();
             }
         }
@@ -89,6 +91,11 @@ public class ChangeTarget : MonoBehaviour
         if (targetShapes.Count > 0)
         {
             random = Random.Range(0, targetShapes.Count - 1);
+            if (shapeResizeNeeded)
+            {
+                Vector3 scale = targetShapes[random].transform.localScale;
+                transform.localScale = scale*55;
+            }
             GetComponent<SpriteRenderer>().sprite = targetShapes[random].GetComponent<SpriteRenderer>().sprite;
             matchObjects = targetShapes[random].GetComponent<MatchObjects>();
         }

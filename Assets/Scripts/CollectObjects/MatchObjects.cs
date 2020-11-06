@@ -28,6 +28,8 @@ public class MatchObjects : MonoBehaviour
 
     private Vector3 offset;
 
+    private Collider2D collider;
+
     #endregion
 
 
@@ -43,6 +45,7 @@ public class MatchObjects : MonoBehaviour
 
     private void Start()
     {
+        collider = GetComponent<Collider2D>();
         particleSystem.GetComponent<Renderer>().sortingOrder = 2;
         initialPosition = transform.position;
     }
@@ -112,6 +115,7 @@ public class MatchObjects : MonoBehaviour
             var position = target.transform.position;
             transform.position = new Vector3(position.x, position.y);
             isLocked = true;
+            collider.enabled = false;
             matchObjectCounter.IncreaseMatchedObjectCount();
         }
         else if (!isLocked)
